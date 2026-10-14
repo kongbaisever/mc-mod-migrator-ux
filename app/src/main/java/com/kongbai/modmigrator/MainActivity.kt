@@ -379,6 +379,9 @@ class MainActivity : AppCompatActivity() {
     private fun showOnly(target: Fragment?) {
         runCatching {
             val tx = supportFragmentManager.beginTransaction()
+            // 切 tab 加一个极短的淡入：硬切太突兀，但又不能长——
+            // 长了会让人觉得卡。120ms 刚好有"动了一下"的感觉。
+            tx.setCustomAnimations(R.anim.fade_in_fast, R.anim.no_anim)
             for (f in supportFragmentManager.fragments) {
                 if (f == null) continue
                 if (f === target) {
