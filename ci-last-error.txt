@@ -1,83 +1,83 @@
 # 最近一次构建失败摘录
-run: 38516822859
-BUILD FAILED in 2m 53s
+run: 38594783972
+> Task :app:packageRelease FAILED
+BUILD FAILED in 4m 20s
 
 ## Tips 定义所在文件
 app/src/main/java/com/kongbai/modmigrator/Tips.kt:13:object Tips {
 
 ## 末尾 80 行
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
-      > Could not resolve org.jetbrains.kotlin:kotlin-stdlib:1.3.71.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.3.71/kotlin-stdlib-1.3.71.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.3.71/kotlin-stdlib-1.3.71.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve org.jetbrains.kotlin:kotlin-stdlib:1.3.71.
-         > Could not get resource 'https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib/1.3.71/kotlin-stdlib-1.3.71.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.3.71/kotlin-stdlib-1.3.71.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve org.ow2.asm:asm:9.2.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
-      > Could not resolve org.ow2.asm:asm:9.2.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve org.ow2.asm:asm:9.2.
-         > Could not get resource 'https://plugins.gradle.org/m2/org/ow2/asm/asm/9.2/asm-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.2/asm-9.2.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve org.ow2.asm:asm-util:9.2.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
-      > Could not resolve org.ow2.asm:asm-util:9.2.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve org.ow2.asm:asm-util:9.2.
-         > Could not get resource 'https://plugins.gradle.org/m2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.2/asm-util-9.2.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve org.ow2.asm:asm-commons:9.2.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
-      > Could not resolve org.ow2.asm:asm-commons:9.2.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve org.ow2.asm:asm-commons:9.2.
-         > Could not get resource 'https://plugins.gradle.org/m2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve org.jdom:jdom2:2.0.6.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
-      > Could not resolve org.jdom:jdom2:2.0.6.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve org.jdom:jdom2:2.0.6.
-         > Could not get resource 'https://plugins.gradle.org/m2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve commons-codec:commons-codec:1.10.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build:builder:8.1.4
-      > Could not resolve commons-codec:commons-codec:1.10.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve commons-codec:commons-codec:1.10.
-         > Could not get resource 'https://plugins.gradle.org/m2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve com.squareup:javawriter:2.5.0.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build:builder:8.1.4
-      > Could not resolve com.squareup:javawriter:2.5.0.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/com/squareup/javawriter/2.5.0/javawriter-2.5.0.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/com/squareup/javawriter/2.5.0/javawriter-2.5.0.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve com.squareup:javawriter:2.5.0.
-         > Could not get resource 'https://plugins.gradle.org/m2/com/squareup/javawriter/2.5.0/javawriter-2.5.0.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/com/squareup/javawriter/2.5.0/javawriter-2.5.0.pom'. Received status code 429 from server: Too Many Requests
-   > Could not resolve com.google.code.findbugs:jsr305:3.0.2.
-     Required by:
-         project : > com.android.application:com.android.application.gradle.plugin:8.1.4 > com.android.tools.build:gradle:8.1.4 > com.android.tools.build:builder:8.1.4 > com.android.tools.build:apkzlib:8.1.4
-      > Could not resolve com.google.code.findbugs:jsr305:3.0.2.
-         > Could not get resource 'https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom'. Received status code 429 from server: Too Many Requests
-      > Could not resolve com.google.code.findbugs:jsr305:3.0.2.
-         > Could not get resource 'https://plugins.gradle.org/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom'.
-            > Could not GET 'https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom'. Received status code 429 from server: Too Many Requests
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/McdocSchema.kt:135:37 Type mismatch: inferred type is Nothing? but String was expected
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MigrationFragment.kt:548:15 'onActivityResult(Int, Int, Intent?): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MigrationFragment.kt:593:9 'startActivityForResult(Intent!, Int): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MigrationFragment.kt:689:29 'startActivityForResult(Intent!, Int): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MigrationFragment.kt:1648:18 Name shadowed: p
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MisodeActivity.kt:420:9 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModManagerFragment.kt:152:69 Parameter 'doing' is never used, could be renamed to _
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModManagerFragment.kt:447:13 Variable 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModMeta.kt:362:50 Unnecessary safe call on a non-null receiver of type Result<TomlArray?>
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModPageActivity.kt:226:19 'onReceivedError(WebView!, Int, String!, String!): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModPageActivity.kt:306:54 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModpackFragment.kt:460:57 There is more than one label with such a name in this scope
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ModrinthApi.kt:80:39 Parameter 'side' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/MrpackInstall.kt:510:24 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/NbtViewerActivity.kt:393:13 Variable 'df' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/OfflineTranslate.kt:194:19 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/QuickTransfer.kt:27:30 'getDefaultAdapter(): BluetoothAdapter!' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/QuickTransfer.kt:36:30 'getDefaultAdapter(): BluetoothAdapter!' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/QuickTransfer.kt:43:23 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/QuickTransfer.kt:45:38 'getDefaultAdapter(): BluetoothAdapter!' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/QuickTransfer.kt:85:22 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerFragment.kt:202:25 'startActivityForResult(Intent!, Int): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerFragment.kt:216:15 'onActivityResult(Int, Int, Intent?): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerFragment.kt:603:51 Parameter 'i' is never used, could be renamed to _
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerFragment.kt:712:13 Variable 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerFragment.kt:806:61 Parameter 'side' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerPanelApi.kt:161:15 Parameter 'base' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerPanelApi.kt:161:29 Parameter 'user' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ServerPanelApi.kt:161:43 Parameter 'pass' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsAboutFragment.kt:244:53 There is more than one label with such a name in this scope
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsHostActivity.kt:199:15 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsMainFragment.kt:66:13 Variable 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsMainFragment.kt:481:13 Variable 'dlg' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsNavFragment.kt:96:15 Variable 'i' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsStorageFragment.kt:145:27 'startActivityForResult(Intent!, Int): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SettingsStorageFragment.kt:294:15 'onActivityResult(Int, Int, Intent?): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/SyncManager.kt:231:25 Name shadowed: f
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/TaskCenter.kt:74:49 Parameter 'done' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ToolsFragment.kt:230:15 Unnecessary safe call on a non-null receiver of type File!
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/ToolsFragment.kt:438:23 Elvis operator (?:) always returns the left operand of non-nullable type Result<Long?>
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/Translator.kt:80:9 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/Translator.kt:283:21 Parameter 'ctx' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/TrashFragment.kt:138:49 Parameter 'total' is never used
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/UpdateInstaller.kt:90:29 Condition 'pid != null' is always 'true'
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/WebActivity.kt:508:20 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/WebTranslate.kt:163:21 Unnecessary safe call on a non-null receiver of type WebViewClient
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/WebTranslate.kt:179:30 Unnecessary safe call on a non-null receiver of type WebViewClient
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/com/kongbai/modmigrator/WebTranslate.kt:179:72 Elvis operator (?:) always returns the left operand of non-nullable type Boolean
+w: file:///home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/src/main/java/io/misode/mobile/MisodeDataCache.kt:130:7 Variable 'r' is never used
+
+> Task :app:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseJavaResource
+> Task :app:mergeDexRelease
+> Task :app:compileReleaseArtProfile
+> Task :app:packageRelease FAILED
+> Task :app:lintVitalAnalyzeRelease
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:packageRelease'.
+> A failure occurred while executing com.android.build.gradle.tasks.PackageAndroidArtifact$IncrementalSplitterRunnable
+   > com.android.ide.common.signing.KeytoolException: Failed to read key kbs from store "/home/runner/work/mc-mod-migrator-ux/mc-mod-migrator-ux/app/release.jks": Tag number over 30 is not supported
 
 * Try:
 > Run with --stacktrace option to get the stack trace.
@@ -85,4 +85,5 @@ app/src/main/java/com/kongbai/modmigrator/Tips.kt:13:object Tips {
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 2m 53s
+BUILD FAILED in 4m 20s
+43 actionable tasks: 43 executed
