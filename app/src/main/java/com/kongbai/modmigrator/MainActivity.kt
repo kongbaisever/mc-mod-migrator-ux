@@ -88,9 +88,10 @@ class MainActivity : AppCompatActivity() {
         // 启动器通过 Intent extra 自报名字与版本（见 LauncherBrand 的说明），
         // 不做包名校验——fork 版改了包名也照样能认。
         // 动画占满 3 秒有点久，所以设置里给了开关，点击任意处也能跳过。
+        // 默认关：每次冷启动都被 3 秒动画拦一下，反而拖慢开机。想要的人去设置里开。
         runCatching {
             val h = LauncherBrand.handoff(this)
-            if (h != null && Prefs.get(this).getBoolean(K.SPLASH_ANIM, true)) {
+            if (h != null && Prefs.get(this).getBoolean(K.SPLASH_ANIM, false)) {
                 LauncherSplash.play(this, h)
             }
         }

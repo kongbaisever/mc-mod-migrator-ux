@@ -129,7 +129,7 @@ class SettingsAnimFragment : Fragment() {
 
         val swSplash = com.google.android.material.materialswitch.MaterialSwitch(ctx).apply {
             text = "从启动器进来时播放"
-            isChecked = Prefs.get(ctx).getBoolean(K.SPLASH_ANIM, true)
+            isChecked = Prefs.get(ctx).getBoolean(K.SPLASH_ANIM, false)
         }
         root.addView(swSplash)
 

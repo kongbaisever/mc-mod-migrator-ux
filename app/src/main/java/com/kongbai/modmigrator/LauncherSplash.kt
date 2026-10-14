@@ -34,7 +34,7 @@ import kotlin.math.roundToInt
  */
 object LauncherSplash {
 
-    private const val DURATION = 3000L
+    private const val DURATION = 1500L
 
     /** 碰撞在整个时间轴上的位置：前 45% 是上升 */
     private const val HIT_AT = 0.45f
