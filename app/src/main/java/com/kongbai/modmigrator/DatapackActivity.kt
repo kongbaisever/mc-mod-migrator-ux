@@ -159,8 +159,13 @@ class DatapackActivity : AppCompatActivity() {
                     return
                 }
                 val h = LoadingOverlay.show(this, "正在展开 ${g.title}…")
+                val path = g.path
+                if (path == null) {
+                    formBox.addView(label("这个生成器没有路径信息，无法展开。"))
+                    return
+                }
                 Bg.io.execute {
-                    val n = McdocForm.build(this, g.path!!, mcVer())
+                    val n = McdocForm.build(this, path, mcVer())
                     runOnUiThread {
                         LoadingOverlay.hide(this, h)
                         node = n
