@@ -24,6 +24,7 @@ class FavoritesFragment : Fragment() {
 
     private lateinit var box: LinearLayout
     private lateinit var tvState: TextView
+    private var query: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -38,6 +39,26 @@ class FavoritesFragment : Fragment() {
         scroll.addView(root)
 
         root.addView(UiCards.hint(ctx, "长按卡片可以移除收藏。点「安装」会装到目标 mods 目录。"))
+
+        // 顶部搜索框：收藏多了以后必须能过滤
+        val etSearch = android.widget.EditText(ctx).apply {
+            hint = "搜索收藏的模组…"
+            inputType = android.text.InputType.TYPE_CLASS_TEXT
+            setSingleLine(true)
+            val pad = (10 * resources.displayMetrics.density).toInt()
+            setPadding(pad, pad, pad, pad)
+            setTextColor(resources.getColor(R.color.textPrimary, null))
+            setHintTextColor(resources.getColor(R.color.textSecondary, null))
+            addTextChangedListener(object : android.text.TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, a: Int, b: Int, c: Int) {}
+                override fun onTextChanged(s: CharSequence?, a: Int, b: Int, c: Int) {}
+                override fun afterTextChanged(s: android.text.Editable?) {
+                    query = s?.toString()?.trim() ?: ""
+                    render()
+                }
+            })
+        }
+        root.addView(etSearch)
 
         tvState = TextView(ctx).apply {
             textSize = 12f
@@ -57,20 +78,30 @@ class FavoritesFragment : Fragment() {
 
     private fun render() {
         val ctx = context ?: return
-        val list = Favorites.list(ctx)
+        val all = Favorites.list(ctx)
+        val list = if (query.isBlank()) all
+        else all.filter {
+            it.name.contains(query, ignoreCase = true) ||
+                it.summary.contains(query, ignoreCase = true) ||
+                it.source.contains(query, ignoreCase = true)
+        }
         box.removeAllViews()
         if (list.isEmpty()) {
             tvState.text = ""
             box.addView(
                 UiCards.emptyCard(
-                    ctx, "还没有收藏",
-                    "在市场里点模组卡片上的「收藏」就会存在这里。\n" +
-                        "收藏不需要先设置工作目录，会直接存在应用内。"
+                    ctx,
+                    if (all.isEmpty()) "还没有收藏" else "没有匹配「$query」的收藏",
+                    if (all.isEmpty())
+                        "在市场里点模组卡片上的「收藏」就会存在这里。\n" +
+                            "收藏不需要先设置工作目录，会直接存在应用内。"
+                    else "换个关键词试试，或者清空搜索框看全部。"
                 )
             )
             return
         }
-        tvState.text = "共 ${list.size} 个"
+        tvState.text = if (query.isBlank()) "共 ${list.size} 个"
+        else "匹配 ${list.size} / ${all.size} 个"
         for (m in list) {
             // ⚠️ 之前这里传的是 R.drawable.ti_building_store（商店图标），
             // 于是每张卡片都是同一个图标，看不出是哪个模组 ——

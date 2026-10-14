@@ -142,11 +142,23 @@ class FirstRunActivity : AppCompatActivity() {
         root.addView(cbMirror)
 
         // ---- 完成 ----
+        // 两个按钮干同一件事，看着像二选一其实不是。
+        // 主按钮就是"开始使用"（它会把上面选的版本/加载器存下来）；
+        // "直接进"做成低调文字链接，不抢主按钮的视觉。
         root.addView(primary("开始使用") { finishSetup() })
-        root.addView(outline("跳过，直接进主界面") {
-            markDone()
-            runSetupSteps()
-        })
+        root.addView(
+            android.widget.TextView(this).apply {
+                text = "跳过这些，直接进主界面 ›"
+                textSize = 13f
+                gravity = android.view.Gravity.CENTER
+                setPadding(0, 16, 0, 0)
+                setTextColor(resources.getColor(R.color.textSecondary, null))
+                safeClickUnit {
+                    markDone()
+                    runSetupSteps()
+                }
+            }
+        )
 
         refresh()
     }
