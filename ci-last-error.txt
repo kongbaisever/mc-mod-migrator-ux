@@ -1,7 +1,7 @@
 # 最近一次构建失败摘录
-run: 38594783972
+run: 38600551883
 > Task :app:packageRelease FAILED
-BUILD FAILED in 4m 20s
+BUILD FAILED in 4m 36s
 
 ## Tips 定义所在文件
 app/src/main/java/com/kongbai/modmigrator/Tips.kt:13:object Tips {
@@ -85,5 +85,5 @@ Execution failed for task ':app:packageRelease'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 4m 20s
+BUILD FAILED in 4m 36s
 43 actionable tasks: 43 executed
