@@ -40,6 +40,8 @@ class ModManagerFragment : Fragment() {
     private val allFiles = ArrayList<androidx.documentfile.provider.DocumentFile>()
     /** 已勾选的文件名 */
     private val picked = HashSet<String>()
+    /** 搜索关键词 */
+    private var query: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -107,6 +109,26 @@ class ModManagerFragment : Fragment() {
         bar.addView(btnBatchOn)
         bar.addView(btnBatchUp)
         root.addView(bar)
+
+        // 搜索框：装了几十个模组以后必须能过滤
+        val etSearch = android.widget.EditText(ctx).apply {
+            hint = "搜索已安装的模组…"
+            inputType = android.text.InputType.TYPE_CLASS_TEXT
+            setSingleLine(true)
+            val pad = (10 * resources.displayMetrics.density).toInt()
+            setPadding(pad, pad, pad, pad)
+            setTextColor(resources.getColor(R.color.textPrimary, null))
+            setHintTextColor(resources.getColor(R.color.textSecondary, null))
+            addTextChangedListener(object : android.text.TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, a: Int, b: Int, c: Int) {}
+                override fun onTextChanged(s: CharSequence?, a: Int, b: Int, c: Int) {}
+                override fun afterTextChanged(s: android.text.Editable?) {
+                    query = s?.toString()?.trim() ?: ""
+                    render(allFiles)
+                }
+            })
+        }
+        root.addView(etSearch)
 
         box = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
         root.addView(box)
@@ -356,7 +378,19 @@ class ModManagerFragment : Fragment() {
     private fun render(list: List<DocumentFile>) {
         val ctx = context ?: return
         box.removeAllViews()
-        if (list.isEmpty()) {
+        // 按搜索词过滤；allFiles 仍装完整列表供批量操作
+        val effective = if (query.isBlank()) list
+        else list.filter {
+            ModToggle.displayName(it).contains(query, ignoreCase = true) ||
+                (it.name ?: "").contains(query, ignoreCase = true)
+        }
+        if (effective.isEmpty() && list.isNotEmpty()) {
+            box.addView(
+                UiCards.emptyCard(ctx, "没有匹配「$query」的模组", "换个关键词，或清空搜索框。")
+            )
+            return
+        }
+        if (effective.isEmpty()) {
             box.addView(
                 UiCards.emptyCard(
                     ctx, "没有找到模组",
@@ -369,7 +403,7 @@ class ModManagerFragment : Fragment() {
         allFiles.addAll(list)
         picked.retainAll(list.map { it.name ?: "" }.toSet())
 
-        for (f in list) {
+        for (f in effective) {
             val name = f.name ?: continue
             val size = f.length()
             val disabled = ModToggle.isDisabled(f)
